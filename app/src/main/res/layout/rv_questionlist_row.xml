@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/TVquestionTitle"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-thin"
+        android:textSize="16sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/BTNdeleteQuestionButton"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_weight="0"
+        android:backgroundTint="#F6B4B4"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="@string/x"
+        android:textAlignment="center"
+        tools:text="X" />
+
+</LinearLayout>

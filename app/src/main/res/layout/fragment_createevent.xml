@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/SVcreateEvent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/div_box_white"
+    android:tag="unique_tag">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.createEventFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+
+
+        <TextView
+            android:id="@+id/TVtopCreateEventTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="@font/quicksand_semibold"
+            android:text="Veranstaltung erstellen"
+            android:textAlignment="center"
+            android:textColor="@color/primaryColor"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/LLeventTitleDesc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <LinearLayout
+            android:id="@+id/LLeventTitleDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/div_box_white"
+            android:elevation="5dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/LLPickDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <EditText
+                android:id="@+id/PTeventTitle"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="16dp"
+                android:ems="10"
+                android:hint="Titel der Veranstaltung"
+                android:inputType="textPersonName"
+                android:textAlignment="textStart"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/MLPTeventDescription"
+                android:layout_width="match_parent"
+                android:layout_height="261dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Beschreibung der Veranstaltung"
+                android:inputType="textMultiLine"
+                android:textAlignment="textStart" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LLPickDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/div_box_white"
+            android:elevation="5dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/LLcreateQuestions"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/BTNdatePicker"
+                android:layout_width="151dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/div_box_green"
+                android:text="Datum wählen" />
+
+            <TextView
+                android:id="@+id/TVchosenDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="Ausgewähltes Datum"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/TVcreateEventTimeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Uhrzeit wählen"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <TimePicker
+                android:id="@+id/timePicker"
+                android:layout_width="174dp"
+                android:layout_height="129dp"
+                android:timePickerMode="spinner" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LLcreateQuestions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/div_box_white"
+            android:elevation="5dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/LLinviteUsers"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/TVquestionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:text="Fragen hinzufügen"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="fill_horizontal"
+                android:orientation="horizontal">
+
+                <Switch
+                    android:id="@+id/switch3GQuestion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="48dp"
+                    android:text="3G Information" />
+
+                <Switch
+                    android:id="@+id/switchPresence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:checked="false"
+                    android:minHeight="48dp"
+                    android:text="Anwesenheit" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/BTNcreateQuestion"
+                android:layout_width="164dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/div_box_green"
+                android:text="Frage erstellen" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RVquestionList"
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/div_box_grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LLinviteUsers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/div_box_white"
+            android:elevation="5dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/createEventButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/TVLabelSendTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:text="Personen einladen"
+                android:textSize="25sp" />
+
+            <FrameLayout
+                android:id="@+id/frameLayoutPersonAdder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/createEventButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="72dp"
+            android:background="@drawable/event_created_box"
+            android:fontFamily="@font/quicksand_semibold"
+            android:hapticFeedbackEnabled="true"
+            android:padding="16dp"
+            android:text="Veranstaltung erstellen!"
+            android:textColor="#373737"
+            android:textSize="16sp"
+            app:icon="@drawable/ic_send_black_24dp"
+            app:iconPadding="0dp"
+            app:iconSize="32dp"
+            app:iconTint="@color/myGray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

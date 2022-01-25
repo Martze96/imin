@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/div_box_gold"
+    android:elevation="5dp"
+    android:orientation="vertical"
+    android:padding="13dp">
+
+    <TextView
+        android:id="@+id/TVmyEventInvitedEventsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="@string/eventtitle"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/TVEventInvitedEventCreatorDisplayName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textview"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/TVmyEventsInvitedEventsDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/eventdate"
+        android:textAlignment="center"
+        android:textColor="#B1B1B1" />
+
+    <TextView
+        android:id="@+id/TVmyEventsInvitedEventsEventId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textview"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/TVmyEventsInvitedEventsDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hier_steht_eine_eventbeschreibung"
+        android:textAlignment="center" />
+
+</LinearLayout>

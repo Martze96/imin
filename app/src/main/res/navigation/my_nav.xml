@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/firstFragment">
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.rwu.imin2.fragments.welcomeFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_welcome" />
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.rwu.imin2.fragments.myEventsFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_myevents" >
+        <action
+            android:id="@+id/action_secondFragment_to_eventDetailFragment"
+            app:destination="@id/eventDetailFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdFragment"
+        android:name="com.rwu.imin2.fragments.createEventFragment"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_createevent" >
+        <action
+            android:id="@+id/action_thirdFragment_to_questionFragment"
+            app:destination="@id/questionFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_thirdFragment_to_secondFragment"
+            app:destination="@id/secondFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.rwu.imin2.fragments.questionFragment"
+        android:label="questionFragment" >
+        <action
+            android:id="@+id/action_questionFragment_to_thirdFragment"
+            app:destination="@id/thirdFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <argument
+            android:name="questionTitle"
+            app:argType="string"
+            android:defaultValue="Frage 1" />
+        <argument
+            android:name="optionsType"
+            app:argType="string"
+            android:defaultValue="SINGLE" />
+        <argument
+            android:name="optionsList"
+            app:argType="string[]" />
+    </fragment>
+    <activity
+        android:id="@+id/registerActivity"
+        android:name="com.rwu.imin2.viewModel.RegisterActivity"
+        android:label="activity_register"
+        tools:layout="@layout/activity_register" />
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.rwu.imin2.viewModel.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+    <fragment
+        android:id="@+id/eventDetailFragment"
+        android:name="com.rwu.imin2.fragments.eventDetailFragment"
+        android:label="eventDetailFragment" >
+        <action
+            android:id="@+id/action_eventDetailFragment_to_secondFragment"
+            app:destination="@id/secondFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_eventDetailFragment_to_thirdFragment"
+            app:destination="@id/thirdFragment"
+            app:enterAnim="@anim/fui_slide_in_right"
+            app:exitAnim="@anim/fui_slide_out_left" />
+        <action
+            android:id="@+id/action_eventDetailFragment_to_answerFragment"
+            app:destination="@id/answerFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_eventDetailFragment_to_eventAnswersFragment"
+            app:destination="@id/eventAnswersFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/answerFragment"
+        android:name="com.rwu.imin2.fragments.answerFragment"
+        android:label="fragment_answer"
+        tools:layout="@layout/fragment_answer" >
+        <action
+            android:id="@+id/action_answerFragment_to_secondFragment"
+            app:destination="@id/secondFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/eventAnswersFragment"
+        android:name="com.rwu.imin2.fragments.eventAnswersFragment"
+        android:label="fragment_event_answers"
+        tools:layout="@layout/fragment_event_answers" />
+</navigation>

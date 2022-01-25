@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/div_box_white"
+    tools:context=".fragments.welcomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <Button
+        android:id="@+id/BTNlogout"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="157dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="78dp"
+        android:text="Ausloggen"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:icon="@drawable/outline_logout_24"
+        app:iconTint="@color/myGray"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/TVwelcomeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:fontFamily="@font/quicksand_regular"
+        android:gravity="center"
+        android:text="Willkommen User!"
+        android:textAlignment="center"
+        android:textColor="@color/primaryColor"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/BTNlogout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="247dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="120dp"
+        android:contentDescription="TODO"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_toast_153723"
+        tools:srcCompat="@drawable/ic_toast_153723" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
